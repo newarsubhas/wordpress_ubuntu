@@ -6,20 +6,22 @@
 - sudo nano /etc/apache2/mods-enabled/dir.conf
 
 update as 
-
+```
 <IfModule mod_dir.c>
     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
+```
 
 - sudo systemctl restart apache2
 - sudo nano /etc/apache2/apache2.conf
 add the line at bottom as 
 - Include /etc/phpmyadmin/apache.conf
 update this
+```
 <Directory /var/www/>
         AllowOverride All
 </Directory>
-
+```
 - sudo a2enmod rewrite
 - sudo service apache2 restart
 
