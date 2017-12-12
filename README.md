@@ -39,6 +39,7 @@ cd /var/www/
 - curl -s https://api.wordpress.org/secret-key/1.1/salt/
 - nano /var/www/wp-config.php
 update generated salt from curl -s https://api.wordpress.org/secret-key/1.1/salt/
+```
 define('AUTH_KEY',         'e;wPq) x<G06Q_)Ni^MYPKJ2gh$WgJeu:Zpw[HFg./DD>,p.0BkU?+K$*Vj.e!z<');
 define('SECURE_AUTH_KEY',  '+fr._?DT:fJ5-?Cq4PJK;-0C|{WsA(_MP>LHnsw?K26)QEr<_&yKz!ns>~Pf=.Fv');
 define('LOGGED_IN_KEY',    '+{,5DVBKnn=G[qrY:M~9rrL$A?Oe:kc8$KEL~G^x=ubQ$vr4tRLZE#!s_0rC/N9G');
@@ -47,24 +48,24 @@ define('AUTH_SALT',        '`M?5|2`[h+M@-u[%Scn|j;oJH7J`qe8So$KC2 [|7^vkI;LF=>e4
 define('SECURE_AUTH_SALT', '2mg D#o+y0-j8#F`A~-(4=f`Q`-%u-i@$QoDX7~~-fnTx<.8KA~:)zNtCph(!rxV');
 define('LOGGED_IN_SALT',   'J@Q-C v.lGYkQ[5Q`lY@%Ct&97pZ6D2Pz){~^{ZIU^%A|4E=0.->|s2]8,-|6}8-');
 define('NONCE_SALT',       'g=}cih57|05#[B^cG7KC}<LmZB4jEKW-~=jef>po2+2IP+!vqh4w.OqTWeUE*bwO');
-
+```
 update database name , user and password 
 
 - nano /etc/apache2/sites-available/000-default.conf
 and update 
-ServerAdmin webmaster@localhost
-DocumentRoot /var/www
-<Directory />
-   Options FollowSymLinks
-   AllowOverride None
-   Require all denied
-</Directory>
-<Directory /var/www/>
-   Options Indexes FollowSymLinks
-   AllowOverride None
-   Require all granted
-</Directory>
-
--
+```
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www
+    <Directory />
+       Options FollowSymLinks
+       AllowOverride None
+       Require all denied
+    </Directory>
+    <Directory /var/www/>
+       Options Indexes FollowSymLinks
+       AllowOverride None
+       Require all granted
+    </Directory>
+```
 
 
